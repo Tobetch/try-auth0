@@ -20,6 +20,7 @@ initFontAwesome();
 
 const App = () => {
   const { isLoading, error } = useAuth0();
+  if (error) console.log("error: " + JSON.stringify(error, null, 2));
 
   if (error) {
     return <div>Oops... {error.message}</div>;
